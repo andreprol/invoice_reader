@@ -5,6 +5,7 @@ hiddenimports = []
 hiddenimports += collect_submodules('pdfplumber')
 hiddenimports += collect_submodules('pdfminer')
 hiddenimports += collect_submodules('openpyxl')
+hiddenimports += ['pytesseract', 'pdf2image']
 
 
 a = Analysis(

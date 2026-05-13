@@ -10,6 +10,7 @@ Aplicação desktop em **Python + Tkinter** para ler PDFs de notas fiscais e ger
   - Data (DD/MM/AAAA)
   - Fornecedor (emitente)
   - Valor total
+- Suporte a PDFs com texto nativo **e PDFs escaneados (imagem)** via OCR automático
 - Pré-visualização em tabela
 - Exportação para Excel (`.xlsx`) com duas abas:
   - **Notas Fiscais**
@@ -27,6 +28,21 @@ Aplicação desktop em **Python + Tkinter** para ler PDFs de notas fiscais e ger
 ```bash
 pip install -r requirements.txt
 ```
+
+## OCR para PDFs escaneados (Windows)
+
+Além das bibliotecas Python, o OCR depende de programas externos:
+
+1. **Instalar Tesseract OCR**
+   - Baixe e instale: https://github.com/UB-Mannheim/tesseract/wiki
+   - Durante a instalação, inclua o idioma **Português (`por`)**
+   - Adicione a pasta do Tesseract ao `PATH` (ex.: `C:\Program Files\Tesseract-OCR`)
+
+2. **Instalar Poppler (necessário para `pdf2image`)**
+   - Baixe um build para Windows (Poppler)
+   - Adicione a pasta `bin` do Poppler ao `PATH`
+
+Sem Tesseract/Poppler no Windows, notas escaneadas não poderão ser lidas e o sistema exibirá mensagem de erro orientando a instalação.
 
 ## Como usar
 
